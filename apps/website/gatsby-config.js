@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `website`,
-    description: `This is a gatsby application created by Nx.`,
+    title: `Faiz Maricar`,
+    description: `I'm a software engineer for the past 5 years mainly working on web
+    and mobile development. If you'd like to keep up with what I'm up to
+    or you would like to say hi you can follow me on socials.`,
   },
   plugins: [
     'gatsby-plugin-emotion',

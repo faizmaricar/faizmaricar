@@ -1,28 +1,53 @@
 import { css } from '@emotion/react';
 
+export const aboutStyles = ({ theme }) => css`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, minmax(10px, auto));
+  grid-column-gap: ${theme.spaces[4]}px;
+`;
+
 export const imageContainerStyles = ({ theme }) => css`
   grid-row: 1 / 2;
-  grid-column: 2 / 4;
+  grid-column: 4 / 6;
   ${theme.breakpoints.sm} {
-    grid-row: 1 / 4;
-    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    grid-column: 1 / 3;
+  }
+  ${theme.breakpoints.md} {
+    grid-row: 1 / 5;
+    grid-column: 1 / 3;
   }
 `;
 
 export const contentContainerStyles = ({ theme }) => css`
-  grid-row: 2 / 4;
-  grid-column: 1 / 5;
+  grid-row: 4 / 5;
+  grid-column: 1 / 9;
   text-align: center;
   ${theme.breakpoints.sm} {
-    grid-row: 1 / 4;
-    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    grid-column: 3 / 9;
+    text-align: initial;
+  }
+  ${theme.breakpoints.md} {
+    grid-row: 1 / 2;
+    grid-column: 3 / 9;
     text-align: initial;
   }
 `;
 
-export const socialLinksStyle = ({ theme }) => css`
-  & li {
-    display: inline-block;
-    padding: ${theme.spaces[1]}px;
+export const socialMediaContainerStyles = ({ theme }) => css`
+  grid-row: 2 / 4;
+  grid-column: 1 / 9;
+  text-align: center;
+  ${theme.breakpoints.sm} {
+    grid-row: 2 / 3;
+    grid-column: 3 / 9;
+    text-align: initial;
+  }
+  ${theme.breakpoints.md} {
+    grid-row: 3 / 4;
+    grid-column: 3 / 9;
+    text-align: initial;
   }
 `;
