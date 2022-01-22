@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import ReactUi from './react-ui';
+import GlobalStyles from './global-styles';
 
-describe('ReactUi', () => {
+describe('GlobalStyles', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<ReactUi />);
+    const { baseElement } = render(<GlobalStyles />);
     expect(baseElement).toBeTruthy();
   });
 });

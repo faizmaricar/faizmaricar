@@ -1,1 +1,1 @@
-export * from './lib/react-ui';
+export * from './lib/global-styles/global-styles';
