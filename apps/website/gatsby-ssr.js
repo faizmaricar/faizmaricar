@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from 'react';
+import { ThemeProvider, GlobalStyles } from '@faizmaricar/react-ui';
 
-// You can delete this file if you're not using it
+import { Layout } from './src/components';
+
+export function wrapPageElement({ element }) {
+  return (
+    <ThemeProvider>
+      <GlobalStyles />
+      <Layout>{element}</Layout>
+    </ThemeProvider>
+  );
+}
