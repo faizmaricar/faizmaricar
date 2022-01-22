@@ -8,16 +8,11 @@ export function GlobalStyles() {
         * {
           margin: 0;
           padding: 0;
+          font-family: 'Jost', sans-serif;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-          font-family: 'Jost', sans-serif;
+        li {
+          list-style: none;
         }
       `}
     />

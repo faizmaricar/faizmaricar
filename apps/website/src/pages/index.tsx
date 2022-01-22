@@ -1,23 +1,9 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Card } from '@faizmaricar/react-ui';
+
+import About from '../components/about';
 
 export function Index() {
-  return (
-    <>
-      <Card>About Me</Card>
-      <StaticImage
-        imgStyle={{ borderRadius: '50%' }}
-        src="../images/profile.jpg"
-        alt="profile"
-        width={100}
-      />
-      <p>
-        I'm a software engineer for the past 5 years. I specialize in web and
-        mobile development.
-      </p>
-    </>
-  );
+  return <About />;
 }
 
 export default Index;
