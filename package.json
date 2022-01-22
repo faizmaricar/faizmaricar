@@ -30,6 +30,7 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "11.3.0",
     "@nrwl/cli": "13.4.6",
     "@nrwl/cypress": "13.4.6",
     "@nrwl/eslint-plugin-nx": "13.4.6",
