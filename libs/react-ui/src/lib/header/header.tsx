@@ -1,22 +1,27 @@
 import styled from '@emotion/styled';
 
 import headerStyles from './header.styles';
-import { StyledPaper } from '../paper/paper';
+import Paper from '../paper/paper';
+import Container from '../container/container';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {
   brand?: string;
 }
 
-const StyledHeader = styled(StyledPaper)`
+const StyledHeader = styled.header`
   ${headerStyles}
 `;
 
 export function Header(props: HeaderProps) {
   return (
-    <StyledHeader elevation={2}>
-      <h4>{props.brand}</h4>
-    </StyledHeader>
+    <Paper elevation={2}>
+      <StyledHeader>
+        <Container>
+          <h4>{props.brand}</h4>
+        </Container>
+      </StyledHeader>
+    </Paper>
   );
 }
 

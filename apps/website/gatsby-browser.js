@@ -4,6 +4,7 @@ import {
   GlobalStyles,
   Page,
   Header,
+  Container,
 } from '@faizmaricar/react-ui';
 
 export function wrapPageElement({ element }) {
@@ -12,7 +13,7 @@ export function wrapPageElement({ element }) {
       <GlobalStyles />
       <Page>
         <Header brand="Faiz Maricar" />
-        {element}
+        <Container>{element}</Container>
       </Page>
     </ThemeProvider>
   );
