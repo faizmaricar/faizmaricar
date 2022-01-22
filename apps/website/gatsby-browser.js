@@ -1,20 +1,13 @@
 import React from 'react';
-import {
-  ThemeProvider,
-  GlobalStyles,
-  Page,
-  Header,
-  Container,
-} from '@faizmaricar/react-ui';
+import { ThemeProvider, GlobalStyles } from '@faizmaricar/react-ui';
+
+import { Layout } from './src/components';
 
 export function wrapPageElement({ element }) {
   return (
     <ThemeProvider>
       <GlobalStyles />
-      <Page>
-        <Header brand="Faiz Maricar" />
-        <Container>{element}</Container>
-      </Page>
+      <Layout>{element}</Layout>
     </ThemeProvider>
   );
 }
