@@ -9,7 +9,7 @@ export interface ContainerProps {
   fluid?: boolean;
 }
 
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   ${containerStyles}
 `;
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Header, Container } from '@faizmaricar/react-ui';
+import { Page, Header, Body } from '@faizmaricar/react-ui';
 
 /* eslint-disable-next-line */
 export interface LayoutProps {
@@ -10,7 +10,7 @@ export function Layout(props: LayoutProps) {
   return (
     <Page>
       <Header brand="Faiz Maricar" />
-      <Container>{props.children}</Container>
+      <Body>{props.children}</Body>
     </Page>
   );
 }
