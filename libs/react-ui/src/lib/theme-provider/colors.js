@@ -7,5 +7,5 @@ export default {
   },
   white: '#ffffff',
   black: '#000000',
-  background: '#e7d7c1',
+  background: '#fff7eb',
 };
