@@ -1,10 +1,11 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Card } from '@faizmaricar/react-ui';
 
 export function Index() {
   return (
     <>
-      <h2>About me</h2>
+      <Card>About Me</Card>
       <StaticImage
         imgStyle={{ borderRadius: '50%' }}
         src="../images/profile.jpg"

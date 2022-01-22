@@ -1,3 +1,4 @@
+export * from './lib/card/card';
 export * from './lib/container/container';
 export * from './lib/paper/paper';
 export * from './lib/header/header';
