@@ -6,6 +6,9 @@ const headerStyles = ({ theme }) =>
     color: ${theme.colors.white};
     text-transform: uppercase;
     text-align: center;
+    ${theme.breakpoints.md} {
+      text-align: initial;
+    }
   `;
 
 export default headerStyles;
