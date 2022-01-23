@@ -13,7 +13,7 @@ export interface UseSiteMetadata {
   githubUrl: string;
   linkedinUrl: string;
   twitchUrl: string;
-  lang: string;
+  htmlAttributes: { lang: string };
 }
 
 const query = graphql`
