@@ -46,12 +46,10 @@ export function About(props: AboutProps) {
             alt="profile"
           />
         </StyledImageContainer>
-        <StyledSocialMediaContainer>
-          <SocialMediaLinks />
-        </StyledSocialMediaContainer>
         <StyledContentContainer>
           <h2>About Me</h2>
           <StyledContentText>{defaultDescription}</StyledContentText>
+          <SocialMediaLinks />
         </StyledContentContainer>
       </StyledAbout>
     </Card>

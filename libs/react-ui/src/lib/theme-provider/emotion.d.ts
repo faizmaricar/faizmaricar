@@ -10,6 +10,6 @@ declare module '@emotion/react' {
       black: string;
       text: string;
     };
-    space: string[];
+    spaces: string[];
   }
 }

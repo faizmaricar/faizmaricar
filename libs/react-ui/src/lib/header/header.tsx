@@ -21,7 +21,7 @@ export function Header(props: HeaderProps) {
       <StyledHeader>
         <Container>
           <Row>
-            <Column xs={2} sm={2} md={2} lg={2} xl={2}>
+            <Column xs={4} sm={8} md={8} lg={12} xl={12}>
               <h4>
                 <a href="/">{props.brand}</a>
               </h4>

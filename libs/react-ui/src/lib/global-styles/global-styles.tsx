@@ -20,6 +20,7 @@ export function GlobalStyles() {
         h6,
         p {
           color: ${theme.colors.text};
+          margin-bottom: ${theme.spaces[2]}px;
         }
 
         li {

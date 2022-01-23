@@ -3,10 +3,13 @@ import { css } from '@emotion/react';
 const headerStyles = ({ theme }) =>
   css`
     background-color: ${theme.colors.primary.main};
-    color: ${theme.colors.white};
     text-transform: uppercase;
     text-align: center;
-    ${theme.breakpoints.md} {
+    & h4 {
+      color: ${theme.colors.white};
+      margin: 0;
+    }
+    ${theme.breakpoints.sm} {
       text-align: initial;
     }
   `;

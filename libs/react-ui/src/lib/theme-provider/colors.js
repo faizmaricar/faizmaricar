@@ -1,12 +1,12 @@
 export default {
   primary: {
-    main: '#16db93',
+    main: '#ad343e',
   },
   secondary: {
-    main: '#fc2f00',
+    main: '#16db93',
   },
   white: '#ffffff',
   black: '#000000',
-  text: '#363732',
-  background: '#c7f9e7',
+  text: '#292f36',
+  background: '#ceabb1',
 };

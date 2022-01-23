@@ -3,7 +3,7 @@ module.exports = {
     title: `Faiz Maricar`,
     titleTemplate: 'Faiz Maricar· Software Engineer',
     image: '/profile.jpg',
-    description: `I'm a software engineer for the past 5 years mainly working on web
+    description: `I'm a software engineer mainly working on web
     and mobile development. If you'd like to keep up with what I'm up to, follow me on my socials.`,
     url: 'https://www.faizmaricar.com',
     twitterUsername: '@faizmaricar',

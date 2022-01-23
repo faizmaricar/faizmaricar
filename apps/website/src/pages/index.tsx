@@ -5,7 +5,7 @@ import About from '../components/about';
 export function Index() {
   return (
     <Row>
-      <Column xs={4} sm={4} md={4} lg={6} xl={6}>
+      <Column xs={4} sm={8} md={8} lg={6} xl={6}>
         <About />
       </Column>
     </Row>
