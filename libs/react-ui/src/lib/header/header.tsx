@@ -4,6 +4,7 @@ import headerStyles from './header.styles';
 import Paper from '../paper/paper';
 import Container from '../container/container';
 import Row from '../row/row';
+import Column from '../column/column';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {
@@ -20,7 +21,9 @@ export function Header(props: HeaderProps) {
       <StyledHeader>
         <Container>
           <Row>
-            <h4>{props.brand}</h4>
+            <Column xs={2} sm={2} md={2} lg={2} xl={2}>
+              <h4>{props.brand}</h4>
+            </Column>
           </Row>
         </Container>
       </StyledHeader>

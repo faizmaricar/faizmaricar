@@ -1,5 +1,7 @@
 export * from './lib/body/body';
 export * from './lib/card/card';
+export * from './lib/column/column';
+export * from './lib/row/row';
 export * from './lib/container/container';
 export * from './lib/paper/paper';
 export * from './lib/header/header';

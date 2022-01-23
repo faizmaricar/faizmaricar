@@ -18,6 +18,9 @@ export const imageContainerStyles = ({ theme }) => css`
     grid-row: 1 / 5;
     grid-column: 1 / 3;
   }
+  ${theme.breakpoints.lg} {
+    grid-column: 1 / 4;
+  }
 `;
 
 export const contentContainerStyles = ({ theme }) => css`
@@ -32,6 +35,11 @@ export const contentContainerStyles = ({ theme }) => css`
   ${theme.breakpoints.md} {
     grid-row: 1 / 2;
     grid-column: 3 / 9;
+    text-align: initial;
+  }
+  ${theme.breakpoints.lg} {
+    grid-row: 1 / 2;
+    grid-column: 4 / 9;
     text-align: initial;
   }
 `;
@@ -50,4 +58,8 @@ export const socialMediaContainerStyles = ({ theme }) => css`
     grid-column: 3 / 9;
     text-align: initial;
   }
+
+  ${theme.breakpoints.md} {
+    grid-column: 4 / 9;
+    
 `;

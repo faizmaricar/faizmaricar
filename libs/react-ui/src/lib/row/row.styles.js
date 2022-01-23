@@ -10,7 +10,7 @@ const rowStyles = ({ theme }) => css`
     grid-column-gap: ${theme.spaces[6]}px;
   }
 
-  ${theme.breakpoints.sm} {
+  ${theme.breakpoints.md} {
     grid-template-columns: repeat(12, 1fr);
   }
 `;
