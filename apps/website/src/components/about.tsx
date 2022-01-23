@@ -9,6 +9,7 @@ import {
   socialMediaContainerStyles,
 } from './about.styles';
 import SocialMediaLinks from './social-media-links';
+import { useSiteMetadata } from '../hooks';
 
 /* eslint-disable-next-line */
 export interface AboutProps {}
@@ -34,6 +35,7 @@ const StyledContentText = styled.p`
 `;
 
 export function About(props: AboutProps) {
+  const { defaultImage, defaultDescription } = useSiteMetadata();
   return (
     <Card>
       <StyledAbout>
@@ -49,11 +51,7 @@ export function About(props: AboutProps) {
         </StyledSocialMediaContainer>
         <StyledContentContainer>
           <h2>About Me</h2>
-          <StyledContentText>
-            I'm a software engineer for the past 5 years mainly working on web
-            and mobile development. If you'd like to keep up with what I'm up to
-            or you would like to say hi you can follow me on socials.
-          </StyledContentText>
+          <StyledContentText>{defaultDescription}</StyledContentText>
         </StyledContentContainer>
       </StyledAbout>
     </Card>

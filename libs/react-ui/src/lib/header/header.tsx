@@ -22,7 +22,9 @@ export function Header(props: HeaderProps) {
         <Container>
           <Row>
             <Column xs={2} sm={2} md={2} lg={2} xl={2}>
-              <h4>{props.brand}</h4>
+              <h4>
+                <a href="/">{props.brand}</a>
+              </h4>
             </Column>
           </Row>
         </Container>

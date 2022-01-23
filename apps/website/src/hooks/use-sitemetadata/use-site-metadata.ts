@@ -8,6 +8,11 @@ export interface UseSiteMetadata {
   siteUrl: string;
   defaultImage: string;
   twitterUsername: string;
+  twitterUrl: string;
+  youtubeUrl: string;
+  githubUrl: string;
+  linkedinUrl: string;
+  twitchUrl: string;
 }
 
 const query = graphql`
@@ -20,6 +25,11 @@ const query = graphql`
         siteUrl: url
         defaultImage: image
         twitterUsername
+        twitterUrl
+        youtubeUrl
+        githubUrl
+        linkedinUrl
+        twitchUrl
       }
     }
   }

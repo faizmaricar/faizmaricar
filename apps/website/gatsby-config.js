@@ -4,10 +4,14 @@ module.exports = {
     titleTemplate: 'Faiz Maricar· Software Engineer',
     image: '/profile.jpg',
     description: `I'm a software engineer for the past 5 years mainly working on web
-    and mobile development. If you'd like to keep up with what I'm up to
-    or you would like to say hi you can follow me on socials.`,
+    and mobile development. If you'd like to keep up with what I'm up to, follow me on my socials.`,
     url: 'https://www.faizmaricar.com',
     twitterUsername: '@faizmaricar',
+    twitterUrl: 'https://twitter.com/FaizMaricar',
+    githubUrl: 'https://github.com/faizmaricar',
+    twitchUrl: 'https://www.twitch.tv/faizmaricar',
+    youtubeUrl: 'https://www.youtube.com/channel/UCOsENEH0kMZ3-L2dqeCyXAA',
+    linkedinUrl: 'https://sg.linkedin.com/in/faiz-maricar-522a14105',
   },
   plugins: [
     'gatsby-plugin-emotion',

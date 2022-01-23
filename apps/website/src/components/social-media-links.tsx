@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import { socialMediaLinksStyle } from './social-media-links.styles';
+import { useSiteMetadata } from '../hooks';
 
 /* eslint-disable-next-line */
 export interface SocialMediaLinksProps {}
@@ -19,18 +20,24 @@ const StyledSocialMediaLinks = styled.ul`
 `;
 
 export function SocialMediaLinks(props: SocialMediaLinksProps) {
+  const { twitterUrl, linkedinUrl, twitchUrl, youtubeUrl, githubUrl } =
+    useSiteMetadata();
+
   const socialMediaIcons = [
-    faTwitter,
-    faLinkedin,
-    faTwitch,
-    faYoutube,
-    faGithub,
+    { icon: faTwitter, url: twitterUrl },
+    { icon: faLinkedin, url: linkedinUrl },
+    { icon: faTwitch, url: twitchUrl },
+    { icon: faYoutube, url: youtubeUrl },
+    { icon: faGithub, url: githubUrl },
   ];
+
   return (
     <StyledSocialMediaLinks>
-      {socialMediaIcons.map((icon) => (
+      {socialMediaIcons.map(({ icon, url }) => (
         <li key={icon.iconName}>
-          <FontAwesomeIcon icon={icon} size="lg" />
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={icon} size="lg" />
+          </a>
         </li>
       ))}
     </StyledSocialMediaLinks>

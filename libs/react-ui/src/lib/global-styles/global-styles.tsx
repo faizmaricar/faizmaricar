@@ -1,6 +1,7 @@
-import { Global, css } from '@emotion/react';
+import { Global, css, useTheme } from '@emotion/react';
 
 export function GlobalStyles() {
+  const theme = useTheme();
   return (
     <Global
       styles={css`
@@ -11,8 +12,23 @@ export function GlobalStyles() {
           font-family: 'Jost', sans-serif;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          color: ${theme.colors.text};
+        }
+
         li {
           list-style: none;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: inherit;
         }
       `}
     />
