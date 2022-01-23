@@ -12,6 +12,9 @@ module.exports = {
     twitchUrl: 'https://www.twitch.tv/faizmaricar',
     youtubeUrl: 'https://www.youtube.com/channel/UCOsENEH0kMZ3-L2dqeCyXAA',
     linkedinUrl: 'https://sg.linkedin.com/in/faiz-maricar-522a14105',
+    htmlAttributes: {
+      lang: 'en',
+    },
   },
   plugins: [
     'gatsby-plugin-emotion',

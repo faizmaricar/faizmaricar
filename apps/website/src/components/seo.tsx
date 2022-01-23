@@ -29,6 +29,7 @@ export function SEO(props: SEOProps) {
     siteUrl,
     defaultImage,
     twitterUsername,
+    htmlAttributes,
   } = useSiteMetadata();
 
   const seo = {
@@ -39,7 +40,11 @@ export function SEO(props: SEOProps) {
   };
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={htmlAttributes}
+    >
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
