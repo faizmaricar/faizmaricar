@@ -35,8 +35,13 @@ export function SocialMediaLinks(props: SocialMediaLinksProps) {
     <StyledSocialMediaLinks>
       {socialMediaIcons.map(({ icon, url }) => (
         <li key={icon.iconName}>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={icon} size="lg" />
+          <a
+            href={url}
+            aria-label={icon.iconName}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={icon} size="2x" />
           </a>
         </li>
       ))}
