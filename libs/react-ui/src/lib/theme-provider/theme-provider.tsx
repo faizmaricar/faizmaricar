@@ -1,4 +1,4 @@
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { Theme, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 
 import colors from './colors';
 import breakpoints from './breakpoints';
@@ -7,7 +7,7 @@ import spaces from './spaces';
 /* eslint-disable-next-line */
 export interface ThemeProps {}
 
-export const theme = {
+export const theme: Theme = {
   colors,
   breakpoints,
   spaces,

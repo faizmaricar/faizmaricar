@@ -1,3 +1,4 @@
+export * from './lib/button/button';
 export * from './lib/body/body';
 export * from './lib/card/card';
 export * from './lib/column/column';

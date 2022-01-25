@@ -1,5 +1,6 @@
+import React from 'react';
 import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button } from '@faizmaricar/react-ui';
 
 import {
   faLinkedin,
@@ -9,17 +10,12 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { socialMediaLinksStyle } from './social-media-links.styles';
 import { useSiteMetadata } from '../hooks';
 
 /* eslint-disable-next-line */
 export interface SocialMediaLinksProps {}
 
-const StyledSocialMediaLinks = styled.ul`
-  ${socialMediaLinksStyle}
-`;
-
-export function SocialMediaLinks(props: SocialMediaLinksProps) {
+export function SocialMediaLinks() {
   const { twitterUrl, linkedinUrl, twitchUrl, youtubeUrl, githubUrl } =
     useSiteMetadata();
 
@@ -32,20 +28,21 @@ export function SocialMediaLinks(props: SocialMediaLinksProps) {
   ];
 
   return (
-    <StyledSocialMediaLinks>
+    <>
       {socialMediaIcons.map(({ icon, url }) => (
-        <li key={icon.iconName}>
-          <a
-            href={url}
-            aria-label={icon.iconName}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={icon} size="2x" />
-          </a>
-        </li>
+        <a
+          key={icon.iconName}
+          href={url}
+          aria-label={icon.iconName}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button outline icon={icon}>
+            {icon.iconName}
+          </Button>
+        </a>
       ))}
-    </StyledSocialMediaLinks>
+    </>
   );
 }
 

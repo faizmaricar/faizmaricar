@@ -6,13 +6,9 @@ import {
   aboutStyles,
   imageContainerStyles,
   contentContainerStyles,
-  socialMediaContainerStyles,
 } from './about.styles';
-import SocialMediaLinks from './social-media-links';
-import { useSiteMetadata } from '../hooks';
 
-/* eslint-disable-next-line */
-export interface AboutProps {}
+import { useSiteMetadata } from '../hooks';
 
 const StyledAbout = styled.div`
   ${aboutStyles}
@@ -26,16 +22,12 @@ const StyledContentContainer = styled.div`
   ${contentContainerStyles}
 `;
 
-const StyledSocialMediaContainer = styled.div`
-  ${socialMediaContainerStyles}
-`;
-
 const StyledContentText = styled.p`
   text-align: justify;
 `;
 
-export function About(props: AboutProps) {
-  const { defaultImage, defaultDescription } = useSiteMetadata();
+export function About() {
+  const { defaultDescription } = useSiteMetadata();
   return (
     <Card>
       <StyledAbout>
@@ -49,7 +41,6 @@ export function About(props: AboutProps) {
         <StyledContentContainer>
           <h2>About Me</h2>
           <StyledContentText>{defaultDescription}</StyledContentText>
-          <SocialMediaLinks />
         </StyledContentContainer>
       </StyledAbout>
     </Card>
