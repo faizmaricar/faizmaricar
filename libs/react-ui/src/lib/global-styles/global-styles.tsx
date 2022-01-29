@@ -19,8 +19,20 @@ export function GlobalStyles() {
         h5,
         h6,
         p {
-          color: ${theme.colors.text};
           margin-bottom: ${theme.spaces[2]}px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: ${theme.colors.primary.main};
+        }
+
+        p {
+          color: ${theme.colors.text};
         }
 
         li {

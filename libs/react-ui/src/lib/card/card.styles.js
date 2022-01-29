@@ -10,7 +10,7 @@ const cardStyles = ({ theme }) =>
       color: ${theme.colors.primary.main};
     }
     ${theme.breakpoints.md} {
-      height: 172px;
+      height: 171px;
     }
   `;
 
