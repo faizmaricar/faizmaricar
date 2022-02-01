@@ -11,6 +11,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               title
               description
               date(formatString: "dddd, D MMMM yyyy")
+              image
             }
             content: html
           }

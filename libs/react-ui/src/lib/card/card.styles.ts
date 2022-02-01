@@ -1,16 +1,16 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
-const cardStyles = ({ theme }) =>
+interface CardStyles {
+  theme: Theme;
+}
+const cardStyles = ({ theme }: CardStyles) =>
   css`
+    flex: 1;
     border: 2px solid ${theme.colors.primary.main};
     border-radius: ${theme.spaces[1]}px;
-    padding: ${theme.spaces[4]}px;
 
     & h2 {
       color: ${theme.colors.primary.main};
-    }
-    ${theme.breakpoints.md} {
-      height: 171px;
     }
   `;
 
