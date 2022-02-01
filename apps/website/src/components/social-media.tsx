@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { Button } from '@faizmaricar/react-ui';
+import { Button, Column } from '@faizmaricar/react-ui';
 
 import {
   faLinkedin,
@@ -12,10 +11,7 @@ import {
 
 import { useSiteMetadata } from '../hooks';
 
-/* eslint-disable-next-line */
-export interface SocialMediaLinksProps {}
-
-export function SocialMediaLinks() {
+export function SocialMedia() {
   const { twitterUrl, linkedinUrl, twitchUrl, youtubeUrl, githubUrl } =
     useSiteMetadata();
 
@@ -28,7 +24,7 @@ export function SocialMediaLinks() {
   ];
 
   return (
-    <>
+    <Column xs={4} sm={4} md={4} lg={4} xl={6}>
       {socialMediaIcons.map(({ icon, url }) => (
         <a
           key={icon.iconName}
@@ -42,8 +38,8 @@ export function SocialMediaLinks() {
           </Button>
         </a>
       ))}
-    </>
+    </Column>
   );
 }
 
-export default SocialMediaLinks;
+export default SocialMedia;
