@@ -13,7 +13,7 @@ export function BlogTemplate({ pageContext }) {
       <img
         style={{
           width: '100%',
-          height: '500px',
+          height: '50vw',
           objectFit: 'cover',
           marginBottom: '32px',
         }}

@@ -16,7 +16,7 @@ export const typography: Typography = {
   h1: { fontSize: 68, lineHeight: 1, letterSpacing: 0.2, fontWeight: 700 },
   h2: { fontSize: 40, lineHeight: 1, letterSpacing: 0.2, fontWeight: 100 },
   h3: { fontSize: 24, lineHeight: 1, letterSpacing: 0.2, fontWeight: 300 },
-  p: { fontSize: 16, lineHeight: 1.2, letterSpacing: 2, fontWeight: 100 },
+  p: { fontSize: 16, lineHeight: 2, letterSpacing: 1.5, fontWeight: 400 },
 };
 
 export default typography;
