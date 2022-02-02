@@ -6,9 +6,9 @@ export interface CardImageProps {
 }
 
 const StyledCardImage = styled.img<CardImageProps>`
-  background-size: cover;
   width: 100%;
-  height: auto;
+  height: 132px;
+  object-fit: cover;
 `;
 
 export function CardImage(props: CardImageProps) {

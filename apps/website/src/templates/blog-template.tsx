@@ -10,7 +10,16 @@ export function BlogTemplate({ pageContext }) {
       <PageDescription>{description}</PageDescription>
       <PageDate>{date}</PageDate>
 
-      <img style={{ width: '100%' }} src={image} alt={title} />
+      <img
+        style={{
+          width: '100%',
+          height: '500px',
+          objectFit: 'cover',
+          marginBottom: '32px',
+        }}
+        src={image}
+        alt={title}
+      />
       {parser(content)}
     </div>
   );
