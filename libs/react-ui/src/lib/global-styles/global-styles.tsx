@@ -17,8 +17,7 @@ export function GlobalStyles() {
         h3,
         h4,
         h5,
-        h6,
-        p {
+        h6 {
           margin-bottom: ${theme.spaces[2]}px;
         }
 
@@ -37,6 +36,7 @@ export function GlobalStyles() {
           line-height: ${theme.typography.p.lineHeight};
           letter-spacing: ${theme.typography.p.letterSpacing}px;
           color: ${theme.colors.text};
+          margin-bottom: ${theme.typography.p.marginBottom}px;
         }
 
         li {
