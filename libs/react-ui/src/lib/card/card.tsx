@@ -2,7 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import cardStyles from './card.styles';
+import CardImage from './card.image';
 import { StyledPaper } from '../paper/paper';
+import CardTitle from './card.title';
 
 /* eslint-disable-next-line */
 export interface CardProps {
@@ -16,5 +18,8 @@ const StyledCard = styled(StyledPaper)`
 export function Card(props: CardProps) {
   return <StyledCard {...props} />;
 }
+
+Card.Image = CardImage;
+Card.Title = CardTitle;
 
 export default Card;

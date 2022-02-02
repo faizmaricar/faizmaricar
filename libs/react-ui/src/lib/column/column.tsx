@@ -11,6 +11,7 @@ export interface ColumnProps {
   md?: number;
   lg?: number;
   xl?: number;
+  noPadding?: boolean;
 }
 
 const StyledColumn = styled.div<ColumnProps>`

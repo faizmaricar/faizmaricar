@@ -4,6 +4,8 @@ export interface UseBlog {
   title: string;
   description: string;
   date: string;
+  image: string;
+  slug: string;
 }
 
 export const blogQuery = graphql`
@@ -15,6 +17,8 @@ export const blogQuery = graphql`
             title
             description
             date
+            image
+            slug
           }
           content: html
         }

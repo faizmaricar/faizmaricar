@@ -1,7 +1,6 @@
 import React from 'react';
+import { Button, Column } from '@faizmaricar/react-ui';
 import styled from '@emotion/styled';
-import { Button } from '@faizmaricar/react-ui';
-
 import {
   faLinkedin,
   faTwitter,
@@ -11,11 +10,18 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import { useSiteMetadata } from '../hooks';
+import { css } from '@emotion/react';
 
-/* eslint-disable-next-line */
-export interface SocialMediaLinksProps {}
+const linkStyles = ({ theme }) =>
+  css`
+    margin-top: ${theme.spaces[2]}px;
+  `;
 
-export function SocialMediaLinks() {
+const StyledLink = styled.a`
+  ${linkStyles}
+`;
+
+export function SocialMedia() {
   const { twitterUrl, linkedinUrl, twitchUrl, youtubeUrl, githubUrl } =
     useSiteMetadata();
 
@@ -28,22 +34,23 @@ export function SocialMediaLinks() {
   ];
 
   return (
-    <>
+    <Column xs={4} sm={4} md={4} lg={4} xl={6} noPadding>
       {socialMediaIcons.map(({ icon, url }) => (
-        <a
+        <StyledLink
           key={icon.iconName}
           href={url}
           aria-label={icon.iconName}
           target="_blank"
           rel="noopener noreferrer"
+          style={{ marginBottom: '8px' }}
         >
           <Button outline icon={icon}>
             {icon.iconName}
           </Button>
-        </a>
+        </StyledLink>
       ))}
-    </>
+    </Column>
   );
 }
 
-export default SocialMediaLinks;
+export default SocialMedia;

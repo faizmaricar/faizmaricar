@@ -5,7 +5,7 @@ export const aboutStyles = ({ theme }) => css`
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, minmax(10px, auto));
   grid-column-gap: ${theme.spaces[4]}px;
-
+  padding: ${theme.spaces[4]}px;
   ${theme.breakpoints.sm} {
     grid-template-rows: repeat(1, minmax(10px, auto));
   }

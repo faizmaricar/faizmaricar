@@ -1,21 +1,27 @@
 import React from 'react';
 import parser from 'html-react-parser';
+import { PageTitle, PageDescription, PageDate } from '@faizmaricar/react-ui';
 
 export function BlogTemplate({ pageContext }) {
-  const { title, description, date, content } = pageContext;
-  const displayDate = new Date(date).toLocaleString('en-UK', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const { title, description, date, image, content } = pageContext;
   return (
-    <>
-      <h1>{title}</h1>
-      <h2>{description}</h2>
-      <h3>{displayDate}</h3>
+    <div style={{ padding: '16px 0' }}>
+      <PageTitle>{title}</PageTitle>
+      <PageDescription>{description}</PageDescription>
+      <PageDate>{date}</PageDate>
+
+      <img
+        style={{
+          width: '100%',
+          height: '50vw',
+          objectFit: 'cover',
+          marginBottom: '32px',
+        }}
+        src={image}
+        alt={title}
+      />
       {parser(content)}
-    </>
+    </div>
   );
 }
 

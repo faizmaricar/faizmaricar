@@ -25,7 +25,6 @@ const buttonStyles = ({
     font-weight: 600;
     font-size: 16px;
     width: 100%;
-    margin-bottom: ${theme.spaces[2]}px;
     &:hover {
       cursor: pointer;
     }

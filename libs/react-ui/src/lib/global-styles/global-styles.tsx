@@ -32,6 +32,10 @@ export function GlobalStyles() {
         }
 
         p {
+          font-size: ${theme.typography.p.fontSize}px;
+          font-weight: ${theme.typography.p.fontWeight};
+          line-height: ${theme.typography.p.lineHeight};
+          letter-spacing: ${theme.typography.p.letterSpacing}px;
           color: ${theme.colors.text};
         }
 
