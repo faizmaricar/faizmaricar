@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
+import { pageTitleStyles } from './text.styles';
 
 export interface PageTitleProps {
   children: string;
 }
 
 const StyledPageTitle = styled.h1`
-  font-size: 60px;
+  ${pageTitleStyles}
 `;
 
 export function PageTitle(props: PageTitleProps) {
