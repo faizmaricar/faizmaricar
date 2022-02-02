@@ -19,3 +19,11 @@ export const pageDescriptionStyles = ({ theme }: TextStyles) =>
     ...theme.typography.h3,
     marginBottom: `${theme.spaces[6]}px`,
   });
+
+export const pageDateStyles = ({ theme }: TextStyles) =>
+  css({
+    ...theme.typography.p,
+    color: theme.colors.primary.main,
+    fontWeight: 600,
+    marginBottom: `${theme.spaces[6]}px`,
+  });
