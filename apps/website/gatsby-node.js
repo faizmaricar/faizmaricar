@@ -12,6 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               description
               date(formatString: "dddd, D MMMM yyyy")
               image
+              slug
             }
             content: html
           }
@@ -27,9 +28,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const blogPostTemplate = path.resolve(`src/templates/blog-template.tsx`);
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const { title } = node.frontmatter;
+    const { slug } = node.frontmatter;
     createPage({
-      path: `blog/${title.toLowerCase().replace(' ', '-')}`,
+      path: `blog/${slug}`,
       component: blogPostTemplate,
       context: {
         ...node.frontmatter,
