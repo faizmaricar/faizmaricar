@@ -1,6 +1,10 @@
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
-const containerStyles = ({ theme }) =>
+interface ContainerStyles {
+  theme: Theme;
+}
+
+const containerStyles = ({ theme }: ContainerStyles) =>
   css`
     margin: 0 ${theme.spaces[4]}px;
 
