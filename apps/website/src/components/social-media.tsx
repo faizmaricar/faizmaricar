@@ -14,10 +14,18 @@ import { css } from '@emotion/react';
 
 const linkStyles = ({ theme }) =>
   css`
-    margin-top: ${theme.spaces[2]}px;
+    margin-right: ${theme.spaces[4]}px;
+    margin-bottom: ${theme.spaces[2]}px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: ${theme.colors.primary.main};
+    &: hover {
+      cursor: pointer;
+    }
   `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.li`
   ${linkStyles}
 `;
 
@@ -34,22 +42,20 @@ export function SocialMedia() {
   ];
 
   return (
-    <Column xs={4} sm={4} md={4} lg={4} xl={6} noPadding>
+    <ul>
       {socialMediaIcons.map(({ icon, url }) => (
-        <StyledLink
-          key={icon.iconName}
-          href={url}
-          aria-label={icon.iconName}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ marginBottom: '8px' }}
-        >
-          <Button outline icon={icon}>
+        <StyledLink key={icon.iconName}>
+          <a
+            href={url}
+            aria-label={icon.iconName}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {icon.iconName}
-          </Button>
+          </a>
         </StyledLink>
       ))}
-    </Column>
+    </ul>
   );
 }
 

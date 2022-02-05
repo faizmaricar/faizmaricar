@@ -8,6 +8,7 @@ import {
   contentContainerStyles,
 } from './about.styles';
 
+import { SocialMedia } from '.';
 import { useSiteMetadata } from '../hooks';
 
 const StyledAbout = styled.div`
@@ -29,7 +30,7 @@ const StyledContentText = styled.p`
 export function About() {
   const { defaultDescription } = useSiteMetadata();
   return (
-    <Column xs={4} sm={4} md={8} lg={8} xl={6}>
+    <Column xs={4} sm={4} md={8} lg={6} xl={6}>
       <Card>
         <StyledAbout>
           <StyledImageContainer>
@@ -43,6 +44,7 @@ export function About() {
             <h2>About Me</h2>
             <StyledContentText>{defaultDescription}</StyledContentText>
           </StyledContentContainer>
+          <SocialMedia />
         </StyledAbout>
       </Card>
     </Column>
