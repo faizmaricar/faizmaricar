@@ -50,6 +50,9 @@ export const contentContainerStyles = ({ theme }) => css`
     grid-row: 1 / 2;
     grid-column: 4 / 9;
     text-align: initial;
+    p {
+      margin-bottom: 0;
+    }
   }
   ${theme.breakpoints.lg} {
     grid-row: 1 / 4;

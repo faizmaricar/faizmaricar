@@ -11,6 +11,7 @@ import {
 
 import { useSiteMetadata } from '../hooks';
 import { css } from '@emotion/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const linkStyles = ({ theme }) =>
   css`
@@ -51,6 +52,8 @@ export function SocialMedia() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <FontAwesomeIcon icon={icon} />
+            &nbsp;
             {icon.iconName}
           </a>
         </StyledLink>

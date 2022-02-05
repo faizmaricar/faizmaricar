@@ -30,7 +30,7 @@ const StyledContentText = styled.p`
 export function About() {
   const { defaultDescription } = useSiteMetadata();
   return (
-    <Column xs={4} sm={4} md={8} lg={6} xl={6}>
+    <Column xs={4} sm={8} md={6} lg={6} xl={6}>
       <Card>
         <StyledAbout>
           <StyledImageContainer>
