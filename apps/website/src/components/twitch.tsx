@@ -18,7 +18,7 @@ export function Twitch() {
     <Column xs={4} sm={8} md={6} lg={6} xl={6}>
       <StyledTwitch
         title="stream"
-        src="https://player.twitch.tv/?channel=faizmaricar&parent=faizmaricar.com"
+        src="https://player.twitch.tv/?channel=faizmaricar&parent=faizmaricar"
         allowFullScreen={true}
       ></StyledTwitch>
     </Column>
