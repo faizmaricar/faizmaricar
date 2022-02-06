@@ -6,10 +6,13 @@ import { css } from '@emotion/react';
 const StyledTwitch = styled.iframe`
   width: 100%;
   height: 55vw;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.12);
   ${({ theme }) =>
     css`
       ${theme.breakpoints.md} {
         height: 100%;
+        border: 2px solid ${theme.colors.primary.main};
+        border-radius: ${theme.spaces[1]}px;
       }
     `}
 `;
