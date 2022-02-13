@@ -8,18 +8,18 @@ export interface SEOProps {
   title: string;
   description: string;
   image: string;
-  article: boolean;
+  content: string;
 }
 
 const defaultProps: SEOProps = {
   title: null,
   description: null,
   image: null,
-  article: false,
+  content: null,
 };
 
 export function SEO(props: SEOProps) {
-  const { title, description, image, article } = props;
+  const { title, description, image, content } = props;
   const { pathname } = useLocation();
 
   const {
@@ -35,10 +35,9 @@ export function SEO(props: SEOProps) {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: image || `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
-
   return (
     <Helmet
       title={seo.title}
@@ -48,7 +47,7 @@ export function SEO(props: SEOProps) {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+      {content && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
