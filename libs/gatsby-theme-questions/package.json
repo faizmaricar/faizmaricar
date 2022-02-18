@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-theme-questions",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "gatsby": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "gatsby": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}

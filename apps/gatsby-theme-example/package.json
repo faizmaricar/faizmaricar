@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "gatsby-theme-example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "nx": {
+    "implicitDependencies": [
+      "gatsby-theme-questions"
+    ]
+  }
+}
