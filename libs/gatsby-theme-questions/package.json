@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "main": "index.js",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  },
   "peerDependencies": {
     "gatsby": "*",
     "react": "*",

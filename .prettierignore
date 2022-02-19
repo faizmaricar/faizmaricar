@@ -6,3 +6,4 @@
 /apps/website/node_modules
 /apps/website/public
 /apps/website/.cache
+*.yml

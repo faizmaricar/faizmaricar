@@ -38,9 +38,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/apps/*/node_modules
-/apps/*/public
-/apps/*/.cache
+node_modules
+public
+.cache
 
 #env vars
 .env
