@@ -1,3 +1,53 @@
 {
-  "root": "apps/quantyfi"
+  "root": "apps/quantyfi",
+
+  "sourceRoot": "apps/quantyfi/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "apps/quantyfi/dist",
+        "main": "apps/quantyfi/src/main.ts",
+        "tsConfig": "apps/quantyfi/tsconfig.app.json",
+        "assets": ["apps/quantyfi/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/quantyfi/src/environments/environment.ts",
+              "with": "apps/quantyfi/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "quantyfi:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/quantyfi/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/quantyfi"],
+      "options": {
+        "jestConfig": "apps/quantyfi/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
 }

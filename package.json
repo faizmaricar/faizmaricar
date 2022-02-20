@@ -6,8 +6,7 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "build:website": "yarn --prefix website build",
-    "build:quantyfi": "yarn --prefix quantyfi build"
+    "build:website": "yarn --prefix website build"
   },
   "private": true,
   "dependencies": {
@@ -17,6 +16,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@netlify/functions": "^1.0.0",
     "core-js": "^3.6.5",
     "gatsby": "4.2.0",
     "gatsby-image": "^3.11.0",

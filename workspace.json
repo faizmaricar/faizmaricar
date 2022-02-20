@@ -1,11 +1,11 @@
 {
   "version": 2,
   "projects": {
-    "react-ui": "libs/react-ui",
-    "gatsby-theme-questions": "libs/gatsby-theme-questions",
-    "website": "apps/website",
-    "website-e2e": "apps/website-e2e",
     "gatsby-theme-example": "apps/gatsby-theme-example",
-    "quantyfi": "apps/quantyfi"
+    "gatsby-theme-questions": "libs/gatsby-theme-questions",
+    "quantyfi": "apps/quantyfi",
+    "react-ui": "libs/react-ui",
+    "website": "apps/website",
+    "website-e2e": "apps/website-e2e"
   }
 }
