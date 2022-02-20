@@ -6,7 +6,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "build:website": "yarn --prefix website build"
+    "build:website": "yarn --prefix website build",
+    "build:quantyfi": "yarn --prefix quantyfi build"
   },
   "private": true,
   "dependencies": {
