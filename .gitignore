@@ -39,7 +39,7 @@ testem.log
 Thumbs.db
 
 node_modules
-public
+apps/website/public
 .cache
 
 #env vars
