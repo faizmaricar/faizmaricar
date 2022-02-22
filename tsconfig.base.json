@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@faizmaricar/react-ui": ["libs/react-ui/src/index.ts"]
+      "@faizmaricar/react-ui": ["libs/react-ui/src/index.ts"],
+      "@faizmaricar/securities-master": ["libs/securities-master/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

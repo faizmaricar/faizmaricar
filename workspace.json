@@ -5,6 +5,7 @@
     "gatsby-theme-questions": "libs/gatsby-theme-questions",
     "quantyfi": "apps/quantyfi",
     "react-ui": "libs/react-ui",
+    "securities-master": "libs/securities-master",
     "website": "apps/website",
     "website-e2e": "apps/website-e2e"
   }
