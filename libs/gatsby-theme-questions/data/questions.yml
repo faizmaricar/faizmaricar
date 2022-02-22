@@ -1,3 +1,6 @@
-title: 
-  - question 1
-  - qukljdkljf
+heading: my heading
+subheading: my sub-heading
+questions:
+  - id: firstName
+    label: First Name
+    type: text
