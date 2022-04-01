@@ -1,0 +1,63 @@
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "postgres"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../node_modules/.prisma/client"
+}
+
+model Exchange {
+  id              Int       @id @default(autoincrement())
+  abbrev          String    @db.VarChar(32)
+  name            String    @db.VarChar(255)
+  city            String?   @db.VarChar(255)
+  country         String?   @db.VarChar(255)
+  currency        String?   @db.VarChar(64)
+  timezoneOffset  DateTime? @db.Time(3)
+  createdDate     DateTime  @db.Timestamp(3)
+  lastUpdatedDate DateTime  @db.Timestamp(3)
+  symbols         Symbol[]
+}
+
+model DataVendor {
+  id              Int       @id @default(autoincrement())
+  name            String    @db.VarChar(64)
+  websiteUrl      String    @db.VarChar(64)
+  supportEmail    String    @db.VarChar(64)
+  createdDate     DateTime  @db.Timestamp(3)
+  lastUpdatedDate DateTime  @db.Timestamp(3)
+  dailyPrices     DailyPrice[]
+}
+
+model Symbol {
+  id              Int       @id @default(autoincrement())
+  exchange        Exchange? @relation(fields: [exchangeId], references: [id])
+  exchangeId      Int?
+  ticker          String    @db.VarChar(32)
+  instrument      String    @db.VarChar(64)
+  name            String    @db.VarChar(255)
+  sector          String    @db.VarChar(255)
+  currency        String    @db.VarChar(32)
+  createdDate     DateTime  @db.Timestamp(3)
+  lastUpdatedDate DateTime  @db.Timestamp(3)
+  dailyPrices     DailyPrice[]
+}
+
+model DailyPrice {
+  id              Int        @id @default(autoincrement())
+  dataVendor      DataVendor @relation(fields: [dataVendorId], references: [id])
+  dataVendorId    Int
+  symbol          Symbol     @relation(fields: [symbolId], references: [id])
+  symbolId        Int
+  priceDate       DateTime   @db.Timestamp(3)
+  createdDate     DateTime   @db.Timestamp(3)
+  lastUpdatedDate DateTime   @db.Timestamp(3)
+  openPrice       Decimal    @db.Decimal(19, 4)
+  highPrice       Decimal    @db.Decimal(19, 4)
+  lowPrice        Decimal    @db.Decimal(19, 4)
+  closePrice      Decimal    @db.Decimal(19, 4)
+  adjClosePrice   Decimal    @db.Decimal(19, 4)
+  volume          BigInt     @db.BigInt
+}
