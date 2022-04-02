@@ -5,6 +5,9 @@ const headerStyles = ({ theme }) =>
     background-color: ${theme.colors.primary.main};
     text-transform: uppercase;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     & h4 {
       color: ${theme.colors.white};
       margin: 0;
