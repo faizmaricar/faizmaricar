@@ -8,6 +8,7 @@ module.exports = {
       lastDeployedCommit,
       latestCommit
     );
+    console.log(lastDeployedCommit);
     if (!projectHasChanged) {
       utils.build.cancelBuild(
         `Build was cancelled because ${currentProject} was not affected by the latest changes`
@@ -21,6 +22,7 @@ function projectChanged(currentProject, fromHash, toHash) {
   const getAffected = `yarn --silent nx print-affected --base=${fromHash} --head=${toHash}`;
   const output = execSync(getAffected).toString();
   const changedProjects = JSON.parse(output).projects;
-
+  console.log(getAffected);
+  console.log(changedProjects);
   return changedProjects.find((project) => project === currentProject);
 }
