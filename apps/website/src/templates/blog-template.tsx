@@ -3,6 +3,14 @@ import parser from 'html-react-parser';
 import { PageTitle, PageDescription, PageDate } from '@faizmaricar/react-ui';
 
 import { SEO } from '../components';
+import styled from '@emotion/styled';
+
+const Image = styled.img`
+  width: 100%;
+  height: 40vw;
+  object-fit: cover;
+  margin-bottom: 32px;
+`;
 
 export function BlogTemplate({ pageContext }) {
   const { title, description, date, image, content } = pageContext;
@@ -12,17 +20,7 @@ export function BlogTemplate({ pageContext }) {
       <PageTitle>{title}</PageTitle>
       <PageDescription>{description}</PageDescription>
       <PageDate>{date}</PageDate>
-
-      <img
-        style={{
-          width: '100%',
-          height: '50vw',
-          objectFit: 'cover',
-          marginBottom: '32px',
-        }}
-        src={image}
-        alt={title}
-      />
+      <Image src={image} alt={title} />
       {parser(content)}
     </div>
   );
