@@ -29,5 +29,5 @@ collections:
           widget: 'string',
           required: false,
         }
-      - { label: 'Tags', name: 'body', widget: 'list', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'list', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
